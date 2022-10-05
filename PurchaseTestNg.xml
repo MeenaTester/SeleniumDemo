@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<groups>
+<run>
+<include name="Purchase"></include>
+
+
+</run>
+</groups>
+
+
+<listeners>
+<listener class-name="utils.ListenerTestNg"></listener>
+</listeners>
+  <test  name="PurchaseTest" >
+    <classes>
+      <class name="EcommerceFramework.PurchasePageTest"/>
+      
+    </classes>
+  </test> <!-- Test -->
+  <test  name="AdPosterTest" >
+    <classes>
+      
+      <class name="EcommerceFramework.AdPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+   <test  name="SignInTest" >
+    <classes>
+      
+      <class name="EcommerceFramework.SignInPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+

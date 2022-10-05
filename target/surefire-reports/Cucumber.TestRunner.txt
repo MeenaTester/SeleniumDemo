@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: Cucumber.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 301.094 s <<< FAILURE! - in Cucumber.TestRunner
+Cucumber.TestRunner.runScenario["postive test when clicked on Ad Page", "Your Logo Ecommerce Website"](1)  Time elapsed: 75.132 s  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Could not start a new session. Response code 500. Message: chrome not reachable
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-J66Q2AT5', ip: '192.168.1.79', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+	at utils.BastTest.initialize(BastTest.java:62)
+	at utils.BastTest.getDriverInstance(BastTest.java:79)
+	at stepDefinition.stepDefinitionImplementation.Landed_on_Your_Logo_Website(stepDefinitionImplementation.java:39)
+	at ✽.Landed on Your Logo Website(file:///C:/eclipseWorkspace/seleniumFramework/LiveProjectsEcommerceFramework/src/test/java/Cucumber/AllTestFeatures.feature:4)
+
+Cucumber.TestRunner.runScenario["Sign In page check with correct and wrong credentials", "Your Logo Ecommerce Website"](3)  Time elapsed: 25.247 s  <<< FAILURE!
+java.lang.AssertionError: expected [ failed..] but found [ failed.]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at stepDefinition.stepDefinitionImplementation.if_correct_credential_page_should_signed_in_with_correct_registered_name_else_error_message_should_displayed(stepDefinitionImplementation.java:74)
+	at ✽.If correct credential page should signed in with correct registered name else error message should displayed(file:///C:/eclipseWorkspace/seleniumFramework/LiveProjectsEcommerceFramework/src/test/java/Cucumber/AllTestFeatures.feature:18)
+
